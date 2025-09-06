@@ -109,7 +109,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Validador de Sudoku</title>
+<title>Rick-Sudoku</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen p-4 text-white">
@@ -134,13 +134,13 @@
             <?php for ($j = 0; $j < 9; $j++):
                     $blockColor = ((int) ($i / 3) + (int) ($j / 3)) % 2 === 0 ? 'bg-gray-800' : 'bg-gray-700';
                 ?>
-	            <td class="border border-gray-600">
-	                <input type="text" maxlength="1" name="cell[<?php echo $i ?>][<?php echo $j ?>]"
-	                       value="<?php echo htmlspecialchars($grid[$i][$j]) ?>"
-	                       class="w-12 h-12 text-center font-bold	                                                              <?php echo $blockColor ?> text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-	                       oninput="this.value=this.value.replace(/[^1-9]/g,'')"/>
-	            </td>
-	            <?php endfor; ?>
+		            <td class="border border-gray-600">
+		                <input type="text" maxlength="1" name="cell[<?php echo $i ?>][<?php echo $j ?>]"
+		                       value="<?php echo htmlspecialchars($grid[$i][$j]) ?>"
+		                       class="w-12 h-12 text-center font-bold		                                                             	                                                              <?php echo $blockColor ?> text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+		                       oninput="this.value=this.value.replace(/[^1-9]/g,'')"/>
+		            </td>
+		            <?php endfor; ?>
         </tr>
         <?php endfor; ?>
     </table>
