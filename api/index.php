@@ -50,6 +50,7 @@
                 for ($j = 0; $j < 9; $j++) {
                     $coluna[] = $this->grid[$j][$i];
                 }
+
                 if (! $this->validar($coluna)) {
                     return false;
                 }
@@ -67,8 +68,8 @@
                         for ($l = 0; $l < 3; $l++) {
                             $bloco[] = $this->grid[$i + $k][$j + $l];
                         }
-                    }
 
+                    }
                     if (! $this->validar($bloco)) {
                         return false;
                     }
@@ -121,7 +122,7 @@
 <?php endif; ?>
 
 <?php if ($sudoku->getResultado()): ?>
-    <div class="mb-4 p-3 rounded<?php echo strpos($sudoku->getResultado(), 'válido') !== false ? 'bg-gray-700 text-blue-200' : 'bg-gray-800 text-red-400'; ?>">
+    <div class="mb-4 p-3 rounded<?php echo strpos($sudoku->getResultado(), 'válido') !== false ? ' bg-gray-700 text-blue-200' : ' bg-gray-800 text-red-400'; ?>">
         <?php echo $sudoku->getResultado(); ?>
     </div>
 <?php endif; ?>
@@ -134,13 +135,13 @@
             <?php for ($j = 0; $j < 9; $j++):
                     $blockColor = ((int) ($i / 3) + (int) ($j / 3)) % 2 === 0 ? 'bg-gray-800' : 'bg-gray-700';
                 ?>
-		            <td class="border border-gray-600">
-		                <input type="text" maxlength="1" name="cell[<?php echo $i ?>][<?php echo $j ?>]"
-		                       value="<?php echo htmlspecialchars($grid[$i][$j]) ?>"
-		                       class="w-12 h-12 text-center font-bold		                                                             	                                                              <?php echo $blockColor ?> text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-		                       oninput="this.value=this.value.replace(/[^1-9]/g,'')"/>
-		            </td>
-		            <?php endfor; ?>
+			            <td class="border border-gray-600">
+			                <input type="text" maxlength="1" name="cell[<?php echo $i ?>][<?php echo $j ?>]"
+			                       value="<?php echo htmlspecialchars($grid[$i][$j]) ?>"
+			                       class="w-12 h-12 text-center font-bold			                                                             		                                                              <?php echo $blockColor ?> text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+			                       oninput="this.value=this.value.replace(/[^1-9]/g,'')"/>
+			            </td>
+			            <?php endfor; ?>
         </tr>
         <?php endfor; ?>
     </table>
