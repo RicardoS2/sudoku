@@ -1,5 +1,8 @@
+
+<img width="1365" height="633" alt="image" src="https://github.com/user-attachments/assets/54d0a867-bc70-4cc6-9b67-ee9787d93c0c" />
+
+
 # Rick-Sudoku
-![Uploading image.png…]()
 
 Rick-Sudoku é um validador de Sudoku online feito em **PHP** utilizando **Programação Orientada a Objetos (POO)** e **Tailwind CSS**. Ele permite que o usuário preencha uma grade 9x9 e valide se o Sudoku está correto ou limpe o tabuleiro. O layout utiliza tons de azul e cinza escuro para criar uma identidade visual única.
 
